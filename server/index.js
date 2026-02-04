@@ -4,6 +4,9 @@ const cors = require('cors');
 require('dotenv').config();
 
 const path = require('path');
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK' });
+});
 
 const authRoutes = require('./routes/AuthRoutes');
 const eventRoutes = require('./routes/EventRoutes');
